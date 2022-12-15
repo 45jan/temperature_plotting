@@ -4,15 +4,17 @@ from matplotlib import pyplot as plt
 
 def compute_mean(data):
     """Compute the mean of a list of numbers
-
     Args:
         data (list): a list of numbers
-
     Returns:
         float: the mean value of the list
     """
-    mean = sum(data)/ len(data)
-    return mean
+
+    if len(data) == 0:
+         return None
+    else:
+        mean = sum(data)/ len(data)
+        return mean
 
 def read_data(filename, colname, num_measurements):
     """Read data from a file and select a column
