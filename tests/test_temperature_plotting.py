@@ -20,6 +20,9 @@ def test_compute_mean():
     
     calc = tpl.compute_mean([])
     assert calc == None # this failed in original function definition, so we will change it (see below)
+    
+    calc = tpl.compute_mean([-5, 5])
+    assert calc == 1
 
     
 test_compute_mean()
