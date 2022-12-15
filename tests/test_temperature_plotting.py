@@ -2,6 +2,10 @@ import pytest, os
 
 import temperature_plotting as tpl
 
+def test_compute_mean_bad():
+    calc = tpl.compute_mean([-5, 5])
+    assert calc == 1
+
 def test_compute_mean():
     calc = tpl.compute_mean([0, 10, 20])
     assert calc == 10 # test if the answer is the expected
@@ -20,9 +24,6 @@ def test_compute_mean():
     
     calc = tpl.compute_mean([])
     assert calc == None # this failed in original function definition, so we will change it (see below)
-    
-    calc = tpl.compute_mean([-5, 5])
-    assert calc == 1
 
     
 test_compute_mean()
