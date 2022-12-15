@@ -4,8 +4,10 @@ from matplotlib import pyplot as plt
 
 def compute_mean(data):
     """Compute the mean of a list of numbers
+    
     Args:
         data (list): a list of numbers
+    
     Returns:
         float: the mean value of the list
     """
